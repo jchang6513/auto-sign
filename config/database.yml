@@ -7,22 +7,21 @@
 default: &default
   adapter: sqlite3
   encoding: utf8
-  database: ncu_auto_sign_test
+  database: auto_sign_test
   host: localhost
   username: root
   password:
-
-development:
-  <<: *default
-  database: ncu_auto_sign_development
 
 # Warning: The database defined as "test" will be erased and
 # re_generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+
+development:
+  <<: *default
+  database: auto_sign_development
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: auto_sign_production
