@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_114706) do
+ActiveRecord::Schema.define(version: 2019_02_08_130358) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "title"
     t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

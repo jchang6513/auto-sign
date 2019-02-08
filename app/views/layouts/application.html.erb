@@ -11,6 +11,8 @@
 
   <body>
     <% if user_signed_in? %>
+      <p> <%= current_user.id %> </p>
+      <p> <%= current_user.email %> </p>
       <li>
       <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       </li>
@@ -19,7 +21,8 @@
       <%= link_to('Login', new_user_session_path)  %>
       </li>
     <% end %>
-    <li><a href="/job">工作列表</a></li>
+    <li><a href="/jobs">工作列表</a></li>
+    <li><a href="/jobs/new">新增工作</a></li>
     <%= yield %>
   </body>
 </html>
