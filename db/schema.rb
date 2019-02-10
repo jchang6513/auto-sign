@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_130358) do
+ActiveRecord::Schema.define(version: 2019_02_10_074833) do
+
+  create_table "clocks", force: :cascade do |t|
+    t.datetime "clock_in"
+    t.datetime "clock_out"
+    t.integer "user_id"
+    t.integer "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string "title"
