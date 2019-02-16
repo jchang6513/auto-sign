@@ -1,0 +1,10 @@
+<%= form_for  ([@job, @clock]) do |f| %>
+     <%= f.label :clock_in %>
+     <%= f.date_field :clock_in %>
+     <%= f.text_field :clock_in, data:{ provide:'datepicker' } %>
+     <br><br>
+     <%= f.label :clock_out %>
+     <%= f.date_field :clock_out %>
+     <br><br>
+     <%= f.submit %>
+<% end %>

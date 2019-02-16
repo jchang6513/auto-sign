@@ -1,6 +1,10 @@
+<li>
+  <%= link_to "新增工作", new_job_url %>
+</li>
+
 <h1>工作列表</h1>
 
 <% @jobs.each do |job| %>
-     <h1><%= link_to job.title, job %></h1>
-     <p><%= job.link %></p>
+   <h1><%= link_to job.title, job %></h1>
+   <p><%= job.link %></p>
 <% end %>

@@ -4,5 +4,8 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :jobs
+  resources :jobs do
+    resources :clocks
+  end
+  
 end

@@ -1,0 +1,13 @@
+<li>
+  <%= link_to "新增預約", new_job_clock_url %>
+</li>
+
+<h1>預約打卡紀錄</h1>
+
+<% @clocks.each do |clock| %>
+  <h3>
+    <i><%= clock.id %></i>
+    <i><%= clock.clock_in %></i>
+    <i><%= clock.clock_out %></i>
+  </h3>
+<% end %>

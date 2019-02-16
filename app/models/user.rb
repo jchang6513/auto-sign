@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :jobs, :clocks
+  has_many :jobs
+  has_many :clocks
 end

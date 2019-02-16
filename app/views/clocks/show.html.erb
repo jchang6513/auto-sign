@@ -1,0 +1,4 @@
+<h1><%= @clock.title %></h1>
+<p><%= @clock.link %></p>
+<%= link_to "Edit", edit_clock_path(@clock) %>
+<%= link_to "Delete", @clock, method: :delete, data: { confirm: "Are you sure?" } %>
