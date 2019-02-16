@@ -5,6 +5,7 @@ class ClocksController < ApplicationController
 
   def index
     @clocks = Clock.where user_id: Clock.current_user.id
+    render json: @clocks.as_json(root: false)
   end
 
   def show
